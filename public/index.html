@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Реестр разработок</title>
+<link href="stylesheets/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<form id="loginForm">
+  <input type="radio" id="signin" name="loginAction" checked>
+  <label for="signin">Войти</label>
+  <input type="radio" id="signup" name="loginAction">
+  <label for="signup">Регистрация</label>
+  <input type="radio" id="reset" name="loginAction">
+  <label for="reset">Сбросить</label>
+  <div id="wrapper">
+    <ul id="loginInput">
+    <li><input id="email" placeholder="Эл. адрес" type="email"/></li>
+    <li><input id="password" placeholder="Пароль" type="password"/></li>
+    <li><input id="repass" placeholder="Повторите пароль" type="password"/></li>
+    </ul>
+  </div>
+  <button type="submit"> <span> Сбросить пароль <br/>
+  Войти <br/>
+  Отправить </span> </button>
+</form>
+</body>
+</html>

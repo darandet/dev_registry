@@ -1,0 +1,115 @@
+@import "globals";
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Yanone+Kaffeesatz');
+
+$font-main: 'Yanone Kaffeesatz', sans-serif;
+$font-input: "Quicksand", sans-serif;
+
+body {
+  background-color: $offwhite;
+  font-family: $font-main;
+
+}
+
+#wrapper {
+  padding: 0;
+  margin: 0;
+  //margin-bottom: 12px;
+  overflow: hidden;
+}
+
+
+#wrapper, label, #arrow, button span { transition: all .5s cubic-bezier(.6,0,.4,1); }
+
+
+#signin:checked ~ #wrapper { height: 104px; }
+#signin:checked ~ button span { transform: translate3d(0,-36px,0); }
+
+
+#signup:checked ~ #wrapper { height: 148px; }
+#signup:checked ~ button span { transform: translate3d(0,-72px,0); }
+
+#reset:checked ~ #wrapper { height: 60px; }
+#reset:checked ~ button span { transform: translate3d(0,0,0); }
+
+
+#loginForm {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  input[type=email], input[type=password] {
+    width: 99.5%;
+    padding: 0;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    height: 36px;
+    text-indent: 0.5em;
+    border: none;
+    font-family: $font-input;
+    font-size: 1em;
+  }
+
+  button {
+    background-color: $button-background-color;
+    color: azure;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.6,0,.4,1);
+    overflow: hidden;
+    height: 36px;
+
+    &:hover {
+      background-color: darken($button-background-color, 5);
+    }
+
+    span {
+      display: block;
+      line-height: 36px;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6em;
+    font-weight: 800;
+    opacity: .5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: blue;
+
+    &:hover {
+      transition: all .3s cubic-bezier(.6,0,.4,1);
+      opacity: 1;
+    }
+  }
+
+  input[type=radio]:checked + label{
+    opacity: 1;
+  }
+}
+
+
+
+input[type=radio] {
+  display: none;
+}
+
+label[for="reset"] {
+
+  margin-left: 60px;
+}
+
+label[for="signin"] {
+  margin-right: 10px;
+}
+
+#loginInput {
+  padding: 0;
+  list-style: none;
+}
