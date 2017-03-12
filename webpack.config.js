@@ -1,21 +1,21 @@
 module.exports = {
-    // entry: "./src/index.js",
-    // output: {
-    //     path: "/public/js",
-    //     filename: "bundle.min.js",
-    //     publicPath: "/js/"
-    // },
-    // devServer: {
-    //     inline: true,
-    //     contentBase: './public',
-    //     port: 3000
-    // },
+    entry: "./src/index.js",
+    output: {
+        path: "/public/js",
+        filename: "bundle.min.js",
+        publicPath: "/js/"
+    },
+    devServer: {
+        inline: true,
+        contentBase: './public',
+        port: 3000
+    },
     module: {
         loaders: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 query: {
                     presets: ['es2015', 'react', 'stage-0']
                 }
